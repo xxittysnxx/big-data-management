@@ -17,6 +17,7 @@ This project builds a real-time data pipeline that extracts **Named Entities** (
 
 ## Project Structure
 
+```
 .
 ├── docker-compose.yml
 ├── Dockerfile
@@ -26,7 +27,7 @@ This project builds a real-time data pipeline that extracts **Named Entities** (
 ├── spark.py # Kafka topic1 -> NER -> Kafka topic2
 ├── logstash.conf # Kafka topic2 -> Elasticsearch
 └── README.md
-
+```
 
 ---
 
@@ -47,7 +48,9 @@ FINNHUB_API_KEY=your_finnhub_api_key_here
 
 ### 3. Start all services
 
-`docker-compose up --build`
+```
+docker-compose up --build
+```
 
 - **Services launched**:
 - Kafka + Zookeeper
@@ -60,6 +63,7 @@ FINNHUB_API_KEY=your_finnhub_api_key_here
 
 ## How the Pipeline Works
 
+```
 [Finnhub API] --> [Producer.py] --> Kafka topic1
                                   |
                                   v
@@ -73,6 +77,7 @@ FINNHUB_API_KEY=your_finnhub_api_key_here
                                   |
                                   v
                               [Kibana]
+```
 
 ---
 
